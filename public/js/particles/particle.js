@@ -29,7 +29,7 @@ class Particle {
     this.x += this.dx;
     this.y += this.dy;
 
-    //////////////////////////// SCALE
+    //////////////////////////// SCALE AND DIE
 
     this.w += this.ds;
     this.h += this.ds;
@@ -44,7 +44,7 @@ class Particle {
 
     this.c += this.dc;
 
-    //////////////////////////// CHANGE ALPHA
+    //////////////////////////// CHANGE ALPHA AND DIE
 
     this.a += this.da;
 
@@ -52,6 +52,9 @@ class Particle {
   }
 
   draw() {
+    
+    //////////////////////////// DRAW MODE CAN BE CHANGED HERE
+
     c.fillStyle = `hsla(${this.c}, 100%, 50%, ${this.a})`;
     c.save();
     c.translate(this.x, this.y);
